@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candlestick Charts</title>
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+<body>
+    <div class="plot">
+        <p>Fill the fields below to view the candlestick charts.</p>
+        <form action="{{url_for ('graph')}}", method="POST">
+            <input type="text" name="codex" placeholder="Enter the Company NASDAQ Code" maxlength="4" required/>
+            <input type="text" name="start_date" placeholder="Enter date in YYYY/MM/DD format" required/>
+            <input type="text" name="end_date" placeholder="Enter date in YYYY/MM/DD format" required/><br>
+            <button type="submit">Proceed</button>
+        </form>   
+    </div>
+</body>
+</html>
+<!--<script type="text/javascript" src={{cdn_js | safe}}></script>
+{{script1 | safe}}
+{{div1 | safe}}-->
